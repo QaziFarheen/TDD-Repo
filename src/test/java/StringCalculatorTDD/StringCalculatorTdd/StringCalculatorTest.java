@@ -30,6 +30,12 @@ public class StringCalculatorTest {
         StringCalculatorTDD calculator = new StringCalculatorTDD();
         assertEquals(6, calculator.add("1\n2,3"));
     }
+    @Test
+    public void testAddWithCustomDelimiter() {
+        StringCalculatorTDD calculator = new StringCalculatorTDD();
+        assertEquals(3, calculator.add("//;\n1;2"));
+    }
+
 
 
 
