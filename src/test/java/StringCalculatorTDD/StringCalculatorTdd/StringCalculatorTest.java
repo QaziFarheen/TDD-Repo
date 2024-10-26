@@ -15,6 +15,11 @@ public class StringCalculatorTest {
         StringCalculatorTDD calculator = new StringCalculatorTDD();
         assertEquals(1, calculator.add("1"));
     }
+    @Test
+    public void testAddTwoNumbers() {
+        StringCalculatorTDD calculator = new StringCalculatorTDD();
+        assertEquals(3, calculator.add("1,2"));
+    }
 
 }
 
