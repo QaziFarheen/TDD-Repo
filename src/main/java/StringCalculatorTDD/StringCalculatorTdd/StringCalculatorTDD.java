@@ -1,5 +1,8 @@
 package StringCalculatorTDD.StringCalculatorTdd;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class StringCalculatorTDD {
     public int add(String numbers) {
         if (numbers.isEmpty()) {
@@ -13,10 +16,19 @@ public class StringCalculatorTDD {
         }
         String[] numArray = numbers.split(delimiter);
         int sum = 0;
+        List<Integer> negatives = new ArrayList<>();
         for (String num : numArray) {
-            sum += Integer.parseInt(num);
+            int number = Integer.parseInt(num);
+            if (number < 0) {
+                negatives.add(number);
+            }
+            sum += number;
+        }
+        if (!negatives.isEmpty()) {
+            throw new IllegalArgumentException("negative numbers not allowed: " + negatives.toString().replaceAll("[\\[\\]]", ""));
         }
         return sum;
+
 
 
     }
