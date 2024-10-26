@@ -20,6 +20,12 @@ public class StringCalculatorTest {
         StringCalculatorTDD calculator = new StringCalculatorTDD();
         assertEquals(3, calculator.add("1,2"));
     }
+    @Test
+    public void testAddMultipleNumbers() {
+        StringCalculatorTDD calculator = new StringCalculatorTDD();
+        assertEquals(6, calculator.add("1,2,3"));
+    }
+
 
 }
 
