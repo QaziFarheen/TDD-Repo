@@ -10,6 +10,12 @@ public class StringCalculatorTest {
         StringCalculatorTDD calculator = new StringCalculatorTDD();
         assertEquals(0, calculator.add(""));
     }
+    @Test
+    public void testAddSingleNumber() {
+        StringCalculatorTDD calculator = new StringCalculatorTDD();
+        assertEquals(1, calculator.add("1"));
+    }
+
 }
 
 
